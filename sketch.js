@@ -23,13 +23,6 @@ function draw()
 {
       background("black");  
 
-      collision();
-      hasCollided();
-      drawSprites();
-}
-
-function collision()
-{
       if(hasCollided(bullet,wall))
       {
             bullet.velocityX=0;
@@ -43,8 +36,12 @@ function collision()
 
             if(damage<10)
             {
+                  wall.shapeColor=color(0,255,0);
             }
       }
+      
+ 
+      drawSprites();
 }
 
 function hasCollided(lbullet,lwall)
